@@ -19,6 +19,7 @@ This repo can serve as a submodule in other projects. (Keep in mind submodules t
 |	Passives	|	Inductors, etc. Can be P-cells	|
 |	Filters		|	Distributed filters		|
 	
-
+# Rules
+- Do NOT push any local tool config files (like xschemrc) into the repo.
 
 
