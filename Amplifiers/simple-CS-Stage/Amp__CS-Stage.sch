@@ -37,10 +37,12 @@ N 200 -190 260 -190 {
 lab=out}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 150 -100 0 0 {name=M1
 L=0.15
-W=1
+W=2
 nf=1 mult=1
 model=nfet_01v8_lvt
 spiceprefix=X
+}
+C {devices/lab_wire.sym} 50 -20 0 1 {name=p3 sig_type=std_logic lab=gnd
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 150 -280 0 0 {name=M10
 L=0.5
@@ -48,6 +50,10 @@ W=10
 nf=1 mult=1
 model=pfet_01v8_lvt
 spiceprefix=X
+}
+C {devices/lab_wire.sym} 50 -100 0 1 {name=p7 sig_type=std_logic lab=gate_n}
+C {devices/lab_wire.sym} 50 -280 0 1 {name=p2 sig_type=std_logic lab=gate_p}
+C {devices/lab_wire.sym} 50 -360 0 1 {name=p5 sig_type=std_logic lab=vdd
 }
 C {devices/ipin.sym} 50 -360 0 0 {name=p6 lab=vdd}
 C {devices/opin.sym} 260 -190 0 0 {name=p10 lab=out}
