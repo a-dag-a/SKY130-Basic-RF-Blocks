@@ -34,7 +34,7 @@ lab=gnd}
 N 260 -240 290 -240 {
 lab=vdd}
 N 590 -240 640 -240 {
-lab=out}
+lab=#net1}
 N 280 -90 320 -90 {
 lab=out}
 N 620 -70 670 -70 {
@@ -55,6 +55,12 @@ N 50 -180 50 -140 {
 lab=gate_n}
 N 50 -180 100 -180 {
 lab=gate_n}
+N 730 -150 730 -140 {
+lab=gnd}
+N 700 -240 820 -240 {
+lab=out}
+N 730 -240 730 -210 {
+lab=out}
 C {devices/vsource.sym} -80 -200 0 0 {name=vds_n value=1.8}
 C {devices/vsource.sym} 50 -110 0 0 {name=vg_n value="dc 0.7 ac 1m SIN(0.7 1m 10MEG)"}
 C {devices/lab_wire.sym} 100 -180 0 1 {name=p9 sig_type=std_logic lab=gate_n}
@@ -70,19 +76,18 @@ C {devices/lab_wire.sym} 260 -240 2 1 {name=p3 sig_type=std_logic lab=vdd
 }
 C {devices/lab_wire.sym} 260 -180 2 1 {name=p5 sig_type=std_logic lab=gnd
 }
-C {devices/lab_wire.sym} 640 -240 0 1 {name=p6 sig_type=std_logic lab=out
+C {devices/lab_wire.sym} 820 -240 0 1 {name=p6 sig_type=std_logic lab=out
 }
 C {devices/code_shown.sym} -470 -440 0 0 {name=s2 only_toplevel=false value=
 "
 .include /home/balram/Models/skywater-pdk-libs-sky130_fd_pr/models/corners/tt.spice
 "}
-C {/home/balram/Models/Circuit-Design/SKY130-Basic-RF-Blocks/Utilities/ProbeBlock/Probe__V-AC-DC.sym} 470 -80 0 0 {name=x2}
+C {/home/balram/Models/Circuit-Design/SKY130-Basic-RF-Blocks/Utilities/ProbeBlock/Probe__V-AC-DC.sym} 470 -80 0 0 {name=x100}
 C {devices/lab_wire.sym} 280 -90 0 1 {name=p12 sig_type=std_logic lab=out
 }
 C {devices/lab_wire.sym} 280 -70 0 1 {name=p13 sig_type=std_logic lab=gnd
 }
-C {Amp__CS-Stage.sym} 440 -210 0 0 {name=x1}
-C {/home/balram/Models/Circuit-Design/SKY130-Basic-RF-Blocks/Utilities/ProbeBlock/Probe__V-AC-DC.sym} 470 -30 0 0 {name=x3}
+C {/home/balram/Models/Circuit-Design/SKY130-Basic-RF-Blocks/Utilities/ProbeBlock/Probe__V-AC-DC.sym} 470 -30 0 0 {name=x101}
 C {devices/lab_wire.sym} 280 -40 0 1 {name=p16 sig_type=std_logic lab=gate_n
 }
 C {devices/lab_wire.sym} 280 -20 0 1 {name=p18 sig_type=std_logic lab=gnd
@@ -91,3 +96,18 @@ C {devices/lab_wire.sym} 670 -90 0 1 {name=p7 sig_type=std_logic lab=out_ac_prob
 C {devices/lab_wire.sym} 670 -70 0 1 {name=p10 sig_type=std_logic lab=out_dc_probe}
 C {devices/lab_wire.sym} 670 -40 0 1 {name=p14 sig_type=std_logic lab=in_ac_probe}
 C {devices/lab_wire.sym} 670 -20 0 1 {name=p15 sig_type=std_logic lab=in_dc_probe}
+C {devices/lab_wire.sym} 50 -20 0 1 {name=p19 sig_type=std_logic lab=gnd
+}
+C {Amp__CS-Stage.sym} 440 -210 0 0 {name=x1}
+C {devices/res.sym} 730 -180 0 0 {name=R1
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_wire.sym} 730 -140 2 1 {name=p23 sig_type=std_logic lab=gnd
+}
+C {devices/capa.sym} 670 -240 3 0 {name=C1
+m=1
+value=10p
+footprint=1206
+device="ceramic capacitor"}
