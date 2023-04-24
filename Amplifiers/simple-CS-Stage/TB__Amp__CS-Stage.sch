@@ -62,9 +62,9 @@ lab=out}
 N 730 -240 730 -210 {
 lab=out}
 C {devices/vsource.sym} -80 -200 0 0 {name=vds_n value=1.8}
-C {devices/vsource.sym} 50 -110 0 0 {name=vg_n value="dc 0.75 ac 1m SIN(0.7 1m 1GIG)"}
+C {devices/vsource.sym} 50 -110 0 0 {name=vg_n value="dc 0.7 ac 1m SIN(0.7 1m 10MEG)"}
 C {devices/lab_wire.sym} 100 -180 0 1 {name=p9 sig_type=std_logic lab=gate_n}
-C {devices/vsource.sym} 50 -300 0 0 {name=vg_p value=1}
+C {devices/vsource.sym} 50 -300 0 0 {name=vg_p value=0.6}
 C {devices/lab_wire.sym} 100 -240 0 1 {name=p11 sig_type=std_logic lab=gate_p}
 C {devices/lab_wire.sym} 90 -360 0 1 {name=p8 sig_type=std_logic lab=vdd
 }

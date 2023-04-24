@@ -45,7 +45,7 @@ spiceprefix=X
 C {devices/lab_wire.sym} 50 -20 0 1 {name=p3 sig_type=std_logic lab=gnd
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 150 -280 0 0 {name=M10
-L=2
+L=0.5
 W=10
 nf=1 mult=1
 model=pfet_01v8_lvt
