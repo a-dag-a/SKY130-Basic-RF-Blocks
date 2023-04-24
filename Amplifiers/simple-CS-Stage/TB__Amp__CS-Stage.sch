@@ -34,7 +34,7 @@ lab=gnd}
 N 260 -240 290 -240 {
 lab=vdd}
 N 590 -240 640 -240 {
-lab=#net1}
+lab=out_dc}
 N 280 -90 320 -90 {
 lab=out}
 N 620 -70 670 -70 {
@@ -55,14 +55,16 @@ N 50 -180 50 -140 {
 lab=gate_n}
 N 50 -180 100 -180 {
 lab=gate_n}
-N 730 -150 730 -140 {
+N 770 -150 770 -140 {
 lab=gnd}
-N 700 -240 820 -240 {
+N 740 -240 860 -240 {
 lab=out}
-N 730 -240 730 -210 {
+N 770 -240 770 -210 {
 lab=out}
+N 640 -240 680 -240 {
+lab=out_dc}
 C {devices/vsource.sym} -80 -200 0 0 {name=vds_n value=1.8}
-C {devices/vsource.sym} 50 -110 0 0 {name=vg_n value="dc 0.7 ac 1m SIN(0.7 1m 10MEG)"}
+C {devices/vsource.sym} 50 -110 0 0 {name=vg_n value="dc 0.7 ac 1m SIN(0.7 1m 1GIG)"}
 C {devices/lab_wire.sym} 100 -180 0 1 {name=p9 sig_type=std_logic lab=gate_n}
 C {devices/vsource.sym} 50 -300 0 0 {name=vg_p value=0.6}
 C {devices/lab_wire.sym} 100 -240 0 1 {name=p11 sig_type=std_logic lab=gate_p}
@@ -76,7 +78,7 @@ C {devices/lab_wire.sym} 260 -240 2 1 {name=p3 sig_type=std_logic lab=vdd
 }
 C {devices/lab_wire.sym} 260 -180 2 1 {name=p5 sig_type=std_logic lab=gnd
 }
-C {devices/lab_wire.sym} 820 -240 0 1 {name=p6 sig_type=std_logic lab=out
+C {devices/lab_wire.sym} 860 -240 0 1 {name=p6 sig_type=std_logic lab=out
 }
 C {devices/code_shown.sym} -470 -440 0 0 {name=s2 only_toplevel=false value=
 "
@@ -99,15 +101,17 @@ C {devices/lab_wire.sym} 670 -20 0 1 {name=p15 sig_type=std_logic lab=in_dc_prob
 C {devices/lab_wire.sym} 50 -20 0 1 {name=p19 sig_type=std_logic lab=gnd
 }
 C {Amp__CS-Stage.sym} 440 -210 0 0 {name=x1}
-C {devices/res.sym} 730 -180 0 0 {name=R1
+C {devices/res.sym} 770 -180 0 0 {name=R1
 value=1e10
 footprint=1206
 device=resistor
 m=1}
-C {devices/lab_wire.sym} 730 -140 2 1 {name=p23 sig_type=std_logic lab=gnd
+C {devices/lab_wire.sym} 770 -140 2 1 {name=p23 sig_type=std_logic lab=gnd
 }
-C {devices/capa.sym} 670 -240 3 0 {name=C1
+C {devices/capa.sym} 710 -240 3 0 {name=C1
 m=1
 value=10p
 footprint=1206
 device="ceramic capacitor"}
+C {devices/lab_wire.sym} 600 -240 0 1 {name=p17 sig_type=std_logic lab=out_dc
+}
