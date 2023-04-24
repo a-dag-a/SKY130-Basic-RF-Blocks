@@ -100,7 +100,7 @@ C {devices/lab_wire.sym} 50 -20 0 1 {name=p19 sig_type=std_logic lab=gnd
 }
 C {Amp__CS-Stage.sym} 440 -210 0 0 {name=x1}
 C {devices/res.sym} 730 -180 0 0 {name=R1
-value=50
+value=1e10
 footprint=1206
 device=resistor
 m=1}
