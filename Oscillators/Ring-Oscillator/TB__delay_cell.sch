@@ -35,8 +35,12 @@ N -0 -70 0 -30 {
 lab=dd}
 N 0 30 -0 50 {
 lab=gnd}
+N 70 -0 70 40 {
+lab=out}
+N 70 100 70 120 {
+lab=gnd}
 C {delay_cell.sym} 0 0 0 0 {name=x1}
-C {devices/vsource.sym} -150 140 0 0 {name=vin value="SIN(0.9 1 1MEG)"}
+C {devices/vsource.sym} -150 140 0 0 {name=vin value="PULSE(0 1.8 2n 2n 2n 50n 100n 5)"}
 C {devices/lab_wire.sym} -90 50 0 1 {name=p1 sig_type=std_logic lab=gnd}
 C {devices/lab_wire.sym} -110 80 0 0 {name=p2 sig_type=std_logic lab=in}
 C {devices/lab_wire.sym} -110 200 0 0 {name=p3 sig_type=std_logic lab=gnd}
@@ -50,3 +54,9 @@ C {devices/code_shown.sym} -310 -170 0 0 {name=s2 only_toplevel=false value=
 "
 .include /home/balram/Models/skywater-pdk-libs-sky130_fd_pr/models/corners/tt.spice
 "}
+C {devices/res.sym} 70 70 0 0 {name=R1
+value=100GIG
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_pin.sym} 70 120 0 0 {name=p9 sig_type=std_logic lab=gnd}
